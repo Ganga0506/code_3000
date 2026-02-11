@@ -14,7 +14,7 @@ def train_model(X, y, seed=seed):
         n_estimators=400,
         max_depth=2,
         subsample=0.85,
-        min_samples_leaf=8,
+        min_samples_leaf=6,
         random_state=seed
     )
     model.fit(X, y)
