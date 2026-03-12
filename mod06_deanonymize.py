@@ -18,7 +18,7 @@ def link_records(anon_df, aux_df):
       anon_id, matched_name
     containing ONLY uniquely matched records.
     """
-    merged = pd.merge(anon_df, aux_df, on=["age", "zip", "gender"])
+    merged = pd.merge(anon_df, aux_df, on=["age", "zip3", "gender"])
 
     counts = merged["anon_id"].value_counts()
     unique_ids = counts[counts == 1].index
